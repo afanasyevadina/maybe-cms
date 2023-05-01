@@ -1,0 +1,26 @@
+{
+    "name": "afanasyevadina/maybe-cms",
+    "description": "maybe description",
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "afanasyevadina",
+            "email": "afanasyeva.dina@gmail.com"
+        }
+    ],
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Altenic\\MaybeCms\\": "src/",
+            "Altenic\\MaybeCms\\Database\\Factories\\": "src/database/factories",
+            "Altenic\\MaybeCms\\Database\\Seeders\\": "src/database/seeders"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Altenic\\MaybeCms\\Tests\\": "tests/"
+        }
+    }
+}
