@@ -10,7 +10,7 @@
     <meta property="og:url" content="{{ url()->current() }}"/>
     <meta property="og:image" content="{{ $ogImage ?? '' }}"/>
     <link rel="stylesheet" href="{{ asset('vendor/maybecms/themes/' . maybe_setting('active_theme') . '/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('vendor/maybecms/themes/' . maybe_setting('active_theme') . '/script.js') }}">
+    <script src="{{ asset('vendor/maybecms/themes/' . maybe_setting('active_theme') . '/script.js') }}" defer></script>
 </head>
 <body>
 @yield('content')

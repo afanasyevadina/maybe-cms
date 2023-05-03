@@ -28,6 +28,7 @@ h2 {
 h3 {
     font-size: 2rem;
     line-height: 1.25;
+    margin-top: 1rem;
     margin-bottom: 1.25rem;
 }
 h4 {
@@ -118,6 +119,7 @@ body {
 .d-row {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     margin-left: -1.5rem;
     margin-right: -1.5rem;
 }
@@ -267,4 +269,33 @@ table th, table td {
 }
 hr {
     border-top: 1px solid #000000;
+}
+.accordion {
+    margin-bottom: 1.75rem;
+}
+.accordion-title {
+    font-size: 1.5rem;
+    display: block;
+    padding: 1rem 0;
+    position: relative;
+}
+.accordion-title::after {
+    display: inline-block;
+    content: '+';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 2.25rem;
+}
+.accordion-title.open::after {
+    content: '-';
+}
+.accordion-title.open + .accordion-content {
+    max-height: 100vh;
+}
+.accordion-content {
+    transition: all .75s;
+    overflow: hidden;
+    max-height: 0;
 }

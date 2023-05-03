@@ -122,7 +122,7 @@ return [
                     'field_type' => 'text',
                 ],
             ],
-            'children' => ['text', 'markdown', 'link', 'image', 'video', 'youtube', 'heading', 'cards', 'table', 'delimeter', 'section', 'preset', 'component'],
+            'children' => ['text', 'markdown', 'link', 'image', 'video', 'youtube', 'heading', 'cards', 'table', 'accordion', 'delimeter', 'section', 'preset', 'component'],
             'root' => true,
             'allow_source' => true,
             'class' => 'fas fa-folder',
@@ -191,6 +191,25 @@ return [
             ],
             'class' => 'far fa-square',
             'children' => ['heading', 'text', 'image'],
+            'allow_source' => true,
+        ],
+        'accordion' => [
+            'title' => 'Аккордеон',
+            'structure' => [
+                [
+                    'slug' => 'title',
+                    'title' => 'Заголовок',
+                    'field_type' => 'text',
+                    'allow_source' => true,
+                ],
+                [
+                    'slug' => 'css',
+                    'title' => 'Свой стиль',
+                    'field_type' => 'text',
+                ],
+            ],
+            'class' => 'fas fa-up-down',
+            'children' => ['heading', 'text', 'image', 'link', 'markdown', 'video', 'youtube'],
             'allow_source' => true,
         ],
         'table' => [
