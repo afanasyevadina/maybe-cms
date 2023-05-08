@@ -16,7 +16,7 @@
             </div>
         </div>
         <div class="editor-wrapper">
-            <div class="editor-tree border-end overflow-auto p-3">
+            <div class="editor-tree border-end overflow-auto p-3 ps-1">
                 <tree-item :block="preset" :depth="0" :order="0" :count="preset.blocks.length" @update="loadPreset"></tree-item>
             </div>
             <div class="editor-fields p-3 overflow-auto">

@@ -1,12 +1,12 @@
 <template>
     <div class="d-flex align-items-start">
-        <a href="#" data-bs-toggle="collapse" :data-bs-target="`#tree-item-${collapseKey}`" class="btn btn-sm border-0 px-0" :class="{'collapsed': collapsed, 'fade': !block.blocks.length}" @click="collapsed = !collapsed" v-if="childrenAllowed">
+        <a href="#" data-bs-toggle="collapse" :data-bs-target="`#tree-item-${collapseKey}`" class="btn btn-sm border-0 pe-0 rounded-0" :class="{'collapsed': collapsed, 'fade': !block.blocks.length, 'btn-secondary': block.id === activeElement?.id}" @click="collapsed = !collapsed" v-if="childrenAllowed">
             <i :class="`fas fa-chevron-${collapsed ? 'right' : 'down'}`"></i>
         </a>
         <div class="w-100">
             <div class="d-flex align-items-center tree-node">
-                <a href="#" class="btn btn-sm w-100 border-0 text-start" @click.prevent="activate">{{ block.title }} {{block.postType && block.query?.select ? `(${block.postType.plural_title})` : ''}}</a>
-                <button class="btn border-0 btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a href="#" class="btn btn-sm w-100 border-0 text-start rounded-0" :class="{'btn-secondary': block.id === activeElement?.id}" @click.prevent="activate">{{ block.title }} {{block.postType && block.query?.select ? `(${block.postType.plural_title})` : ''}}</a>
+                <button class="btn border-0 btn-sm dropdown-toggle rounded-0" :class="{'btn-secondary': block.id === activeElement?.id}" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fas fa-ellipsis-vertical"></i>
                 </button>
                 <ul class="dropdown-menu py-0">
@@ -80,7 +80,8 @@ export default {
     computed: {
         ...mapState([
             'primitives',
-            'collapsedNodes'
+            'collapsedNodes',
+            'activeElement'
         ]),
         collapseKey: function () {
             return `${this.block.class_name}-${this.block.id}`

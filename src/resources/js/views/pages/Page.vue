@@ -16,7 +16,7 @@
             </div>
         </div>
         <div class="editor-wrapper">
-            <div class="editor-tree border-end overflow-auto p-3">
+            <div class="editor-tree border-end overflow-auto p-3 ps-1">
                 <tree-item :block="page" :depth="0" :order="0" :count="page.blocks.length"
                            @update="loadPage"></tree-item>
             </div>

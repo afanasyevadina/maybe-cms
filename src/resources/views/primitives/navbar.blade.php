@@ -1,4 +1,4 @@
-<div
+<navbar
     class="navbar {{ $block->getProperty('background') }}" style="{{ $block->getProperty('css') }}"
 >
     <a href="/" class="navbar-brand">
@@ -12,4 +12,4 @@
             @include('maybecms::primitives.' . $childBlock->type, ['block' => $childBlock])
         @endif
     @endforeach
-</div>
+</navbar>

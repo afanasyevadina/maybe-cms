@@ -16,7 +16,7 @@
             </div>
         </div>
         <div class="editor-wrapper">
-            <div class="editor-tree border-end overflow-auto p-3">
+            <div class="editor-tree border-end overflow-auto p-3 ps-1">
                 <tree-item :block="post" :depth="0" :order="0" :count="post.blocks.length"
                            @update="loadPost"></tree-item>
             </div>
