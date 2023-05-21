@@ -17,7 +17,7 @@ class Component extends Model
             ]);
         });
 
-        static::deleting(function (Preset $component) {
+        static::deleting(function (Component $component) {
             foreach ($component->blocks as $block) $block->delete();
         });
     }

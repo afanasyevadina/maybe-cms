@@ -27,6 +27,12 @@
 
 ## Установка
 
+Установите composer-пакет:
+
+```shell
+composer require afanasyevadina/maybe-cms
+```
+
 Подключите провайдер в app.php:
 
 ```phpt
@@ -41,6 +47,7 @@
         ...
 
     ],
+],
 ```
 
 Выполните команду:
